@@ -1,0 +1,104 @@
+$title-font: NeumannR, sans-serif;
+$first-font: MuseoSansCyrl700, sans-serif;
+$secondary-font: MuseoSansCyrl500, sans-serif;
+$third-font: MuseoSansCyrl300, sans-serif;
+$four-font: MuseoSansCyrl100, sans-serif;
+$main-color: #ecc66b;
+$first-color: #25252d;
+$number-color: #393943;
+$secondary-color: #ffffff;
+$block-color: #313139;
+$grey: #89898a;
+$black: #000;
+$border-error: #ff0000ac;
+
+@mixin titleFont() {
+  font-family: $title-font;
+  color: $main-color;
+}
+
+@mixin descrFont() {
+  font-family: $secondary-font;
+  color: $secondary-color;
+}
+
+@mixin guarantessStyle-title() {
+  font-family: $secondary-font;
+  font-size: clamp(16px, 5vw, 18px);
+  color: $secondary-color;
+}
+
+@mixin guarantessStyle-description() {
+  font-family: $four-font;
+  font-size: (14px, 5vw, 18px);
+  color: $secondary-color;
+}
+
+@mixin download-btn() {
+  font-family: $first-font;
+  color: $secondary-color;
+  background-color: transparent;
+  border: 1px solid $secondary-color;
+  border-radius: 30px;
+}
+@mixin inputStyle() {
+  font-family: $third-font;
+  color: $secondary-color;
+  background-color: transparent;
+  border: 1px solid $secondary-color;
+  border-radius: 30px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
